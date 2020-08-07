@@ -1,14 +1,12 @@
-query pastLaunchesList($limit: Int!) {
-  launchesPast(limit: $limit) {
+query ships($limit: Int!) {
+  ships(limit: $limit) {
     id
-    mission_name
-    links {
-      flickr_images
-      mission_patch_small
+    image
+    missions {
+      name
     }
-    rocket {
-      rocket_name
-    }
-    launch_date_utc
+    name
+    type
+    home_port
   }
 }
