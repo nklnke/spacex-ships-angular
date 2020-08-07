@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LaunchDetailsComponent } from './launch-details/launch-details.component';
-import { LaunchListComponent } from './launch-list/launch-list.component';
+import { ShipListComponent } from './ship-list/ship-list.component';
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LaunchListComponent
+    component: ShipListComponent,
   },
   {
     path: ':id',
-    component: LaunchDetailsComponent
+    component: ShipDetailsComponent,
   },
 ];
 

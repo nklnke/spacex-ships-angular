@@ -1323,53 +1323,53 @@ export type CoreMission = {
   flight?: Maybe<Scalars['Int']>;
 };
 
-export type LaunchDetailsQueryVariables = Exact<{
+export type ShipDetailsQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type LaunchDetailsQuery = (
+export type ShipDetailsQuery = (
   { __typename?: 'Query' }
-  & { launch?: Maybe<(
-    { __typename?: 'Launch' }
-    & Pick<Launch, 'id' | 'mission_name' | 'details'>
-    & { links?: Maybe<(
-      { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'flickr_images' | 'mission_patch'>
-    )> }
+  & { ship?: Maybe<(
+    { __typename?: 'Ship' }
+    & Pick<Ship, 'name' | 'type' | 'home_port' | 'weight_kg' | 'class' | 'year_built' | 'id'>
+    & { missions?: Maybe<Array<Maybe<(
+      { __typename?: 'ShipMission' }
+      & Pick<ShipMission, 'name'>
+    )>>> }
   )> }
 );
 
-export type PastLaunchesListQueryVariables = Exact<{
+export type ShipListQueryVariables = Exact<{
   limit: Scalars['Int'];
 }>;
 
 
-export type PastLaunchesListQuery = (
+export type ShipListQuery = (
   { __typename?: 'Query' }
-  & { launchesPast?: Maybe<Array<Maybe<(
-    { __typename?: 'Launch' }
-    & Pick<Launch, 'id' | 'mission_name' | 'launch_date_utc'>
-    & { links?: Maybe<(
-      { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'flickr_images' | 'mission_patch_small'>
-    )>, rocket?: Maybe<(
-      { __typename?: 'LaunchRocket' }
-      & Pick<LaunchRocket, 'rocket_name'>
-    )> }
+  & { ships?: Maybe<Array<Maybe<(
+    { __typename?: 'Ship' }
+    & Pick<Ship, 'name' | 'type' | 'home_port' | 'class' | 'id'>
+    & { missions?: Maybe<Array<Maybe<(
+      { __typename?: 'ShipMission' }
+      & Pick<ShipMission, 'name'>
+    )>>> }
   )>>> }
 );
 
-export const LaunchDetailsDocument = gql`
-    query launchDetails($id: ID!) {
-  launch(id: $id) {
-    id
-    mission_name
-    details
-    links {
-      flickr_images
-      mission_patch
+export const ShipDetailsDocument = gql`
+    query shipDetails($id: ID!) {
+  ship(id: $id) {
+    missions {
+      name
     }
+    name
+    type
+    home_port
+    weight_kg
+    class
+    year_built
+    id
   }
 }
     `;
@@ -1377,26 +1377,24 @@ export const LaunchDetailsDocument = gql`
   @Injectable({
     providedIn: 'root'
   })
-  export class LaunchDetailsGQL extends Apollo.Query<LaunchDetailsQuery, LaunchDetailsQueryVariables> {
-    document = LaunchDetailsDocument;
+  export class ShipDetailsGQL extends Apollo.Query<ShipDetailsQuery, ShipDetailsQueryVariables> {
+    document = ShipDetailsDocument;
     
     constructor(apollo: Apollo.Apollo) {
       super(apollo);
     }
   }
-export const PastLaunchesListDocument = gql`
-    query pastLaunchesList($limit: Int!) {
-  launchesPast(limit: $limit) {
+export const ShipListDocument = gql`
+    query shipList($limit: Int!) {
+  ships(limit: $limit) {
+    missions {
+      name
+    }
+    name
+    type
+    home_port
+    class
     id
-    mission_name
-    links {
-      flickr_images
-      mission_patch_small
-    }
-    rocket {
-      rocket_name
-    }
-    launch_date_utc
   }
 }
     `;
@@ -1404,8 +1402,8 @@ export const PastLaunchesListDocument = gql`
   @Injectable({
     providedIn: 'root'
   })
-  export class PastLaunchesListGQL extends Apollo.Query<PastLaunchesListQuery, PastLaunchesListQueryVariables> {
-    document = PastLaunchesListDocument;
+  export class ShipListGQL extends Apollo.Query<ShipListQuery, ShipListQueryVariables> {
+    document = ShipListDocument;
     
     constructor(apollo: Apollo.Apollo) {
       super(apollo);

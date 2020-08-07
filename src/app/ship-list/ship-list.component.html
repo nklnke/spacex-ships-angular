@@ -1,0 +1,14 @@
+<ng-container *ngIf="shipList$ | async as ships">
+  <main>
+    <section class="container">
+      <div
+        *ngFor="let ship of ships"
+        [router-link]="['/', ship.id]"
+      >
+        {{ ship.name }} / {{ ship.type }} / {{ ship.home_port }} ===
+
+        {{ ship.missions.name }}
+      </div>
+    </section>
+  </main>
+</ng-container>

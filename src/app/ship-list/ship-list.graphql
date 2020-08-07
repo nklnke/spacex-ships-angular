@@ -1,12 +1,14 @@
-query ships($limit: Int!) {
+query shipList($limit: Int!) {
   ships(limit: $limit) {
-    id
-    image
     missions {
       name
     }
     name
     type
     home_port
+    # weight_kg
+    # class
+    # year_built
+    id
   }
 }

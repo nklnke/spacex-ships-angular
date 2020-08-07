@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LaunchListComponent } from './launch-list/launch-list.component';
-import { LaunchDetailsComponent } from './launch-details/launch-details.component';
+import { ShipListComponent } from './ship-list/ship-list.component';
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LaunchListComponent,
-    LaunchDetailsComponent
+    ShipListComponent,
+    ShipDetailsComponent
   ],
   imports: [
     BrowserModule,

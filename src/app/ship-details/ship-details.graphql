@@ -1,0 +1,14 @@
+query shipDetails($id: ID!) {
+  ship(id: $id) {
+    missions {
+      name
+    }
+    name
+    type
+    home_port
+    weight_kg
+    # class
+    year_built
+    id
+  }
+}

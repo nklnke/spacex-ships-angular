@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spacex-ships-angular": {
+    "newangular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spacex-ships-angular",
+            "outputPath": "dist/newangular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spacex-ships-angular:build"
+            "browserTarget": "newangular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spacex-ships-angular:build:production"
+              "browserTarget": "newangular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spacex-ships-angular:build"
+            "browserTarget": "newangular:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spacex-ships-angular:serve"
+            "devServerTarget": "newangular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "spacex-ships-angular:serve:production"
+              "devServerTarget": "newangular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "spacex-ships-angular"
+  "defaultProject": "newangular"
 }
