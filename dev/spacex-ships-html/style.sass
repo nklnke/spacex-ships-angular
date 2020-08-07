@@ -56,23 +56,34 @@ input[type=text]
 
 .ship
   display: flex
+  // width: 50vw
   flex-wrap: wrap
   padding-bottom: 1.8125rem
   margin-bottom: 2.5rem
 
   border-bottom: 1px solid #A5A5A5
 
+.ship-single
+  display: flex
+  width: 50vw
+  flex-wrap: wrap
+  padding-bottom: 1.8125rem
+  margin-bottom: 2.5rem
+
+
 .type,
-.port
+.port,
+.weight,
+.year
   display: flex
   flex: 1
   flex-wrap: wrap
-  justify-content: start
   
   div
-    flex: auto
-
+    &:first-child
+      flex: 1
     &:last-child
+      flex: 1
       color: #2962FF
 
 .type
@@ -80,6 +91,10 @@ input[type=text]
 
 .port
   float: right
+
+.weight,
+.year
+  margin-top: 2.5rem
 
 .pagination
   display: flex
@@ -99,9 +114,20 @@ input[type=text]
 .radio label
   line-height: 1.1875rem
 
+.missions
+  width: 50vw
+  line-height: 2rem
+  color: #2962FF
+
+  a
+    font-size: 1rem
+
 
 
 // typography
+
+p
+  margin-bottom: 1.375rem
 
 h1
   font-size: 1.75rem
@@ -121,6 +147,14 @@ h4
   font-size: 0.875rem
   color: rgba(0, 0, 0, .4)
 
+a
+  font-size: 0.875rem
+  text-decoration: none
+  color: #2962FF
+
+  &:hover
+    text-decoration: underline
+
 
 
 // helpers
@@ -131,8 +165,32 @@ h4
 
 .arrow
   &::after
-    content: url(images/arrow.svg)
+    background-image: url(images/arrow.svg)
+    display: inline-block
+    background-size: 16px 16px
+    height: 16px
+    width: 16px
+    content: ""
     margin-left: 1.4375rem
+
+.back
+  margin-bottom: 1.375rem
+  display: inline-block
+  
+  &::before
+    background-image: url(images/arrow.svg)
+    display: inline-block
+    background-size: 9px 9px
+    height: 9px
+    width: 9px
+    content: ""
+    margin-right: .4375rem
+
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    transform: rotate(180deg)
 
 
 
