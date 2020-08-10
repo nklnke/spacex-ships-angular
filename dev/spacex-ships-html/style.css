@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+select,
+input[type=text] {
+  width: 100%;
+}
+
+input[type=text] {
+  padding-bottom: 0.4375rem;
+  margin-bottom: 2.5625rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.87);
+}
+input[type=text]:focus {
+  outline: none;
+  border-bottom: 1px solid #347CFF;
+}
+input[type=text]::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.container {
+  order: 1;
+  flex: 4 auto;
+  padding: 3.25rem 3.9375rem;
+  border-right: 1px solid #A5A5A5;
+}
+
+.sidebar {
+  order: 2;
+  flex: 1 250px;
+  padding: 3.25rem 2.0625rem;
+}
+
+.ship {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1.8125rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #A5A5A5;
+}
+
+.ship-single {
+  display: flex;
+  width: 50vw;
+  flex-wrap: wrap;
+  padding-bottom: 1.8125rem;
+  margin-bottom: 2.5rem;
+}
+
+.type,
+.port,
+.weight,
+.year {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.type div:first-child,
+.port div:first-child,
+.weight div:first-child,
+.year div:first-child {
+  flex: 1;
+}
+.type div:last-child,
+.port div:last-child,
+.weight div:last-child,
+.year div:last-child {
+  flex: 1;
+  color: #2962FF;
+}
+
+.type {
+  float: left;
+}
+
+.port {
+  float: right;
+}
+
+.weight,
+.year {
+  margin-top: 2.5rem;
+}
+
+.pagination {
+  display: flex;
+}
+.pagination * {
+  padding: 1.625rem 0.8125rem;
+}
+.pagination p {
+  line-height: 2rem;
+}
+
+.radio-group {
+  margin-top: 1.5rem;
+}
+.radio-group input[type=radio] {
+  margin-bottom: 1.0625rem;
+}
+
+.radio label {
+  line-height: 1.1875rem;
+}
+
+.missions {
+  width: 50vw;
+  line-height: 2rem;
+  color: #2962FF;
+}
+.missions a {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1.375rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.8125rem;
+}
+
+h3 {
+  line-height: 1.1875rem;
+  margin-bottom: 1.4375rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #2962FF;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.arrow::after {
+  background-image: url(images/arrow.svg);
+  display: inline-block;
+  background-size: 16px 16px;
+  height: 16px;
+  width: 16px;
+  content: "";
+  margin-left: 1.4375rem;
+}
+
+.back {
+  margin-bottom: 1.375rem;
+  display: inline-block;
+}
+.back::before {
+  background-image: url(images/arrow.svg);
+  display: inline-block;
+  background-size: 9px 9px;
+  height: 9px;
+  width: 9px;
+  content: "";
+  margin-right: 0.4375rem;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  padding: 1.1875rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.23), 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+#checkboxes label {
+  display: block;
+  line-height: 1.1875rem;
+}
+#checkboxes label:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#checkboxes input[type=checkbox] {
+  margin-right: 0.8125rem;
+}
+
+select {
+  padding-bottom: 0.4375rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.87);
+}
+select:focus {
+  outline: none;
+  border-bottom: 1px solid #347CFF;
+}
+
+/*# sourceMappingURL=style.css.map */
