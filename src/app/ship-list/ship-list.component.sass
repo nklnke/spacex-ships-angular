@@ -1,0 +1,129 @@
+// main
+
+.wrapper
+  display: flex
+  flex-wrap: wrap
+  height: 100vh
+
+.container
+  order: 1
+  flex: 4 auto
+  padding: 3.25rem 3.9375rem
+
+  border-right: 1px solid #A5A5A5
+
+.sidebar
+  order: 2
+  flex: 1 250px
+  padding: 3.25rem 2.0625rem
+
+.ship
+  display: flex
+  // width: 50vw
+  flex-wrap: wrap
+  padding-bottom: 1.8125rem
+  margin-bottom: 2.5rem
+
+  border-bottom: 1px solid #A5A5A5
+
+.ship-single
+  display: flex
+  width: 50vw
+  flex-wrap: wrap
+  padding-bottom: 1.8125rem
+  margin-bottom: 2.5rem
+
+
+.type,
+.port,
+.weight,
+.year
+  display: flex
+  flex: 1
+  flex-wrap: wrap
+  
+  div
+    &:first-child
+      flex: 1
+    &:last-child
+      flex: 1
+      color: #2962FF
+
+.type
+  float: left
+
+.port
+  float: right
+
+.weight,
+.year
+  margin-top: 2.5rem
+
+.pagination
+  display: flex
+
+  *
+    padding: 1.625rem .8125rem
+
+  p
+    line-height: 2rem
+
+.radio-group
+  margin-top: 1.5rem
+
+  input[type=radio]
+    margin-bottom: 1.0625rem
+
+.radio label
+  line-height: 1.1875rem
+
+.missions
+  width: 50vw
+  line-height: 2rem
+  color: #2962FF
+
+  a
+    font-size: 1rem
+
+
+
+// multiselect
+
+.selectBox
+  position: relative
+
+.selectBox select
+  width: 100%
+
+.overSelect
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+
+#checkboxes
+  display: none
+  padding: 1.1875rem
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.23), 0px 3px 6px rgba(0, 0, 0, 0.16)
+
+  label
+    display: block
+    line-height: 1.1875rem
+    
+    &:not(:last-child)
+      margin-bottom: 1rem
+  
+  input[type=checkbox]
+    margin-right: .8125rem
+
+select
+  padding-bottom: .4375rem
+
+  border: none
+  border-bottom: 1px solid rgba(0, 0, 0, .3)
+  color: rgba(0, 0, 0, .87)
+  
+  &:focus
+    outline: none
+    border-bottom: 1px solid #347CFF
