@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: rgba(0, 0, 0, 0.87);
+  transition: 0.2s ease;
 }
 
 select,
@@ -77,12 +78,13 @@ input[type=text]::placeholder {
 .weight div:first-child,
 .year div:first-child {
   flex: 1;
+  margin-right: 0.3125rem;
 }
 .type div:last-child,
 .port div:last-child,
 .weight div:last-child,
 .year div:last-child {
-  flex: 1;
+  flex: 1 250px;
   color: #2962FF;
 }
 
@@ -239,6 +241,12 @@ select {
 select:focus {
   outline: none;
   border-bottom: 1px solid #347CFF;
+}
+
+@media only screen and (max-width: 880px) {
+  .container {
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
