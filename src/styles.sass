@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+// global styles
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+html,
+body
+  margin: 0
+  
+*
+  font-size: 16px
+  line-height: 24px
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+  font-family: 'Roboto', sans-serif
+  color: rgba(0, 0, 0, .87)
+
+
+
+// inputs
+
+select,
+input[type=text]
+  width: 100%
+
+input[type=text]
+  padding-bottom: 0.4375rem
+  margin-bottom: 2.5625rem
+
+  border: none
+  border-bottom: 1px solid rgba(0, 0, 0, .3)
+  color: rgba(0, 0, 0, .87)
+  
+  &:focus
+    outline: none
+    border-bottom: 1px solid #347CFF
+  
+  &::placeholder
+    color: rgba(0, 0, 0, .4)
+
+
+
+// typography
+
+p
+  margin-bottom: 1.375rem
+
+h1
+  font-size: 1.75rem
+  line-height: 2rem
+  margin-bottom: 4rem
+
+h2
+  font-size: 1.25rem
+  line-height: 1.75rem
+  margin-bottom: 1.8125rem
+
+h3
+  line-height: 1.1875rem
+  margin-bottom: 1.4375rem
+
+h4
+  font-size: 0.875rem
+  color: rgba(0, 0, 0, .4)
+
+a
+  font-size: 0.875rem
+  text-decoration: none
+  color: #2962FF
+
+  &:hover
+    text-decoration: underline
+
+
+
+// helpers
+
+.break
+  flex-basis: 100%
+  height: 0
+
+.arrow
+  &::after
+    background-image: url(assets/images/arrow.svg)
+    display: inline-block
+    background-size: 16px 16px
+    height: 16px
+    width: 16px
+    content: ""
+    margin-left: 1.4375rem
+
+.back
+  margin-bottom: 1.375rem
+  display: inline-block
+  
+  &::before
+    background-image: url(assets/images/arrow.svg)
+    display: inline-block
+    background-size: 9px 9px
+    height: 9px
+    width: 9px
+    content: ""
+    margin-right: .4375rem
+
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    transform: rotate(180deg)
