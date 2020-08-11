@@ -1,1 +1,35 @@
-<p>ship-details works!</p>
+<div class="wrapper" id="#app" *ngIf="shipDetails$ | async as shipDetails">
+  <main class="container">
+    <a [routerLink]="['/']" class="back">Back</a>
+
+    <h1>{{ shipDetails.name }}</h1>
+
+    <div class="ship-single">
+      <div class="type">
+        <div>Type:</div>
+        <div>{{ shipDetails.type }}</div>
+      </div>
+      <div class="port">
+        <div>Port:</div>
+        <div>{{ shipDetails.home_port }}</div>
+      </div>
+      <div class="break"></div>
+      <div class="weight">
+        <div>Weight:</div>
+        <div>{{ shipDetails.weight_kg }} kg</div>
+      </div>
+      <div class="year">
+        <div>Year:</div>
+        <div>{{ shipDetails.year_built }}</div>
+      </div>
+    </div>
+
+    <p>Missions</p>
+
+    <div class="missions">
+      <a *ngFor="let mission of shipDetails.missions" href="">{{ mission.name }}</a>
+    </div>
+
+
+  </main>
+</div>
